@@ -18,3 +18,15 @@ document.querySelector("ul").addEventListener("click", (e) => {
 		});
 	}
 });
+
+// typeWriter
+const typeWriter = (el) => {
+	const textArray = el.innerHTML.split("");
+	el.innerHTML = "";
+	textArray.forEach((letter, i) =>
+		setTimeout(() => (el.innerHTML += letter), 100 * i)
+	);
+	setInterval(() => typeWriter(el), 8000);
+};
+
+typeWriter(document.querySelector("h1"));
