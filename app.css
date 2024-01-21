@@ -33,7 +33,13 @@ body {
   left: 50px;
   transform: translateY(-50%);
 }
-.wrapper .header .logo span {
+.wrapper .header .logo div {
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0 0 1px var(--primary));
+  transition: 0.5s;
+}
+.wrapper .header .logo div span {
   position: relative;
   width: 80px;
   height: 80px;
@@ -41,11 +47,6 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 3;
-}
-.wrapper .header .logo div {
-  position: relative;
-  z-index: 3;
-  filter: drop-shadow(0 0 1px var(--primary));
 }
 .wrapper .header .logo div::before {
   position: absolute;
@@ -64,6 +65,9 @@ body {
   height: 80px;
   background-color: var(--main);
   transform: rotate(45deg);
+}
+.wrapper .header .logo div:hover {
+  transform: scale(1.1);
 }
 .wrapper .header h1 {
   width: 100%;
@@ -116,6 +120,21 @@ body {
   background-color: var(--secondary);
   padding: 10px 20px 40px 30px;
   border-left: 1px solid var(--primary);
+}
+.wrapper .wrapper-content .content .square {
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary);
+  border: 5px outset var(--main);
+  filter: drop-shadow(0 0 1px var(--primary));
+  transition: 1s;
+  z-index: 3;
+}
+.wrapper .wrapper-content .content .square:hover {
+  transform: rotate(360deg);
 }
 .wrapper .wrapper-content .content .item {
   position: absolute;
