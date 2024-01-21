@@ -127,7 +127,7 @@ body {
   position: relative;
   width: 70%;
   background-color: var(--secondary);
-  padding: 10px 20px 40px 30px;
+  padding: 20px 20px 40px 30px;
   border-left: 1px solid var(--primary);
 }
 .wrapper .wrapper-content .content .square {
@@ -150,14 +150,34 @@ body {
   top: 50px;
   opacity: 0;
   z-index: -1;
+  height: 0;
   font-size: 18px;
+  overflow: hidden;
   line-height: 24px;
+}
+.wrapper .wrapper-content .content .item h2 {
+  margin-bottom: 20px;
+}
+.wrapper .wrapper-content .content .item h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.wrapper .wrapper-content .content .item p {
+  margin-bottom: 10px;
+}
+.wrapper .wrapper-content .content .item ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.wrapper .wrapper-content .content .item ul li {
+  margin-bottom: 10px;
 }
 .wrapper .wrapper-content .content .item.active {
   position: relative;
   top: 0;
   opacity: 1;
   z-index: 1;
+  height: auto;
   transition: 0.5s;
 }
 
