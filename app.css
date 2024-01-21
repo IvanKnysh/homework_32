@@ -21,6 +21,57 @@ body {
   padding-right: 20px;
 }
 
+.wrapper .header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+}
+.wrapper .header .logo {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+}
+.wrapper .header .logo span {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.wrapper .header .logo div {
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0 0 1px var(--primary));
+}
+.wrapper .header .logo div::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: var(--main);
+}
+.wrapper .header .logo div::after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: var(--main);
+  transform: rotate(45deg);
+}
+.wrapper .header h1 {
+  width: 100%;
+  text-align: right;
+  font-size: 50px;
+  font-weight: 400;
+  padding-right: 100px;
+}
 .wrapper .wrapper-content {
   display: flex;
   border: 1px solid var(--primary);
@@ -71,8 +122,8 @@ body {
   top: 50px;
   opacity: 0;
   z-index: -1;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 24px;
 }
 .wrapper .wrapper-content .content .item.active {
   position: relative;
