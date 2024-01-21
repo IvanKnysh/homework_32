@@ -1,9 +1,11 @@
+// Reset selector
 const resetActiveSelector = (selector) => {
 	document.querySelectorAll(selector).forEach((item) => {
 		item.classList.remove("active");
 	});
 };
 
+// tabs
 document.querySelector("ul").addEventListener("click", (e) => {
 	if (e.target.tagName === "LI") {
 		resetActiveSelector("li");
@@ -26,7 +28,9 @@ const typeWriter = (el) => {
 	textArray.forEach((letter, i) =>
 		setTimeout(() => (el.innerHTML += letter), 100 * i)
 	);
-	setInterval(() => typeWriter(el), 8000);
+	if (!document.hidden) {
+		setInterval(() => typeWriter(el), 8000);
+	}
 };
 
 typeWriter(document.querySelector("h1"));
