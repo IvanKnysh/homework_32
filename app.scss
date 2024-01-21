@@ -32,9 +32,9 @@ body {
 			top: 50%;
 			left: 50px;
 			transform: translateY(-50%);
+			z-index: 2;
 			div {
 				position: relative;
-				z-index: 3;
 				filter: drop-shadow(0 0 1px var(--primary));
 				transition: 0.5s;
 				span {
@@ -44,7 +44,7 @@ body {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					z-index: 3;
+					z-index: 1;
 				}
 				&::before {
 					position: absolute;
